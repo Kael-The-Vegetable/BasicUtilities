@@ -1,0 +1,13 @@
+{
+  "name": "com.kael-the-vegetable.basic_utilities",
+  "version": "0.1.0",
+  "displayName": "Basic Utilities",
+  "description": "This package holds basic utilities that are found it almost all Unity games such as Singletons, or Timers.",
+  "unity": "6000.0",
+  "unityRelease": "46f1",
+  "author": {
+    "name": "Kael Kostiuk",
+    "email": "kael.kostiuk@gmail.com",
+    "url": "https://kael-the-vegetable.github.io/"
+  }
+}

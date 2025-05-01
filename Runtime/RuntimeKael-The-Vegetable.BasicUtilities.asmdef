@@ -1,0 +1,14 @@
+{
+    "name": "Runtime/Kael-The-Vegetable.BasicUtilities",
+    "rootNamespace": "BasicUtilities",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
