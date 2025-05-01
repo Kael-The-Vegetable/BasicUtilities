@@ -9,5 +9,12 @@
     "name": "Kael Kostiuk",
     "email": "kael.kostiuk@gmail.com",
     "url": "https://kael-the-vegetable.github.io/"
-  }
+  },
+  "samples": [
+    {
+      "displayName": "Timer Examples",
+      "description": "Contains an example script that uses the timers in this package.",
+      "path": "Samples~/Timers"
+    }
+  ]
 }
