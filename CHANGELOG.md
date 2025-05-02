@@ -13,3 +13,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - A LICENSE file using MIT.
 - The inclusion of a Timers Sample.
 - Code for Singletons and Timers.
+- Included a README file.
