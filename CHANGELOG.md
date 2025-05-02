@@ -14,3 +14,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - The inclusion of a Timers Sample.
 - Code for Singletons and Timers.
 - Included a README file.
+- Added constructive documentation in DOCUMENTATION.md.

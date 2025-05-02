@@ -21,11 +21,6 @@ namespace BasicUtilities
 				_duration = value;
 			}
 		}
-
-		/// <summary>
-		/// Set this boolean to alter whether or not this timer will be affected by <seealso cref="Time.timeScale"/>
-		/// </summary>
-		public bool Realtime { get; set; } = false;
 		
 		/// <summary>
 		/// The remaining time until the countdown finishes.

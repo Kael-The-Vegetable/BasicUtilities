@@ -15,8 +15,10 @@ public class TestingTimers : MonoBehaviour
 
         stopwatch = new();
         stopwatch.OnStop += (StopwatchTimer timer) => Debug.Log("Stopped");
-        stopwatch.OnPause += (StopwatchTimer timer) => Debug.Log("Paused");
-        stopwatch.OnResume += (StopwatchTimer timer) => Debug.Log("Resumed");
+        stopwatch.OnPause += (StopwatchTimer timer) =>
+        {
+            Debug.Log("Timer has " + timer.IsPaused ? "Paused" : "Resumed");
+        };
         stopwatch.OnLap += (StopwatchTimer timer) =>
         {
             for (int i = 0; i < timer.Laps.Count; i++)

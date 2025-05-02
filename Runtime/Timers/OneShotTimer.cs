@@ -8,7 +8,7 @@ namespace BasicUtilities
 	/// Provides one-shot (single-fire) delay-based timer utilities for executing actions after a delay.
 	/// </summary>
 	public static class OneShotTimer
-    {
+	{
 		/// <summary>
 		/// Executes an action after a delay using game time (scaled time), running asynchronously.
 		/// The delay will count down using <see cref="Time.deltaTime"/>.
@@ -20,15 +20,15 @@ namespace BasicUtilities
 		/// Uses frame-based timing via <seealso cref="Awaitable.NextFrameAsync"/> for precision aligned with Unity's update loop.
 		/// </remarks>
 		public static async void Delay(float delay, Action action, CancellationToken t)
-        {
-            while (delay > 0)
-            {
-                await Awaitable.NextFrameAsync(t);
-                delay -= Time.deltaTime;
-            }
-            if (t.IsCancellationRequested) return;
-            action.Invoke();
-        }
+		{
+			while (delay > 0)
+			{
+				await Awaitable.NextFrameAsync(t);
+				if (t.IsCancellationRequested) return;
+				delay -= Time.deltaTime;
+			}
+			action.Invoke();
+		}
 
 		/// <summary>
 		/// Executes an action after a delay using real time (unscaled time), running asynchronously.
@@ -41,10 +41,10 @@ namespace BasicUtilities
 		/// Internally uses <seealso cref="Awaitable.WaitForSecondsAsync"/> to ensure time accuracy regardless of game time scale.
 		/// </remarks>
 		public static async void DelayRealtime(float delay, Action action, CancellationToken t)
-        {
+		{
 			await Awaitable.WaitForSecondsAsync(delay, t);
-            if (t.IsCancellationRequested) return;
-            action.Invoke();
-        }
-    }
+			if (t.IsCancellationRequested) return;
+			action.Invoke();
+		}
+	}
 }

@@ -22,11 +22,6 @@ namespace BasicUtilities
 
 		public event Action<StopwatchTimer> OnLap;
 
-		/// <summary>
-		/// Set this boolean to alter whether or not this timer will be affected by <seealso cref="Time.timeScale"/>
-		/// </summary>
-		public bool Realtime { get; set; } = false;
-
 		/// <inheritdoc/>
 		public override void Start(bool triggerAction = true)
 		{

@@ -24,6 +24,11 @@ namespace BasicUtilities
 		public bool IsPaused { get; protected set; }
 
 		/// <summary>
+		/// Set this boolean to alter whether or not this timer will be affected by <seealso cref="Time.timeScale"/>
+		/// </summary>
+		public bool Realtime { get; set; } = false;
+
+		/// <summary>
 		/// The current elapsed time of the timer, in seconds.
 		/// </summary>
 		public float ElapsedTime { get; protected set; }
@@ -34,10 +39,8 @@ namespace BasicUtilities
 		public virtual event Action<T> OnTick;
 		/// <summary>Fires when the timer is canceled or completed.</summary>
 		public virtual event Action<T> OnStop;
-		/// <summary>Fires when the timer is paused.</summary>
+		/// <summary>Fires when the timer is paused or resumed (can be checked from <see cref="IsPaused"/>.</summary>
 		public virtual event Action<T> OnPause;
-		/// <summary>Fires when the timer is resumed from a paused state.</summary>
-		public virtual event Action<T> OnResume;
 
 		protected CancellationTokenSource cancelSource;
 
@@ -73,13 +76,7 @@ namespace BasicUtilities
 
 			IsPaused = pauseTimer;
 
-			if (triggerAction)
-			{
-				if (IsPaused)
-					OnPause?.Invoke(this as T);
-				else
-					OnResume?.Invoke(this as T);
-			}
+			if (triggerAction) OnPause?.Invoke(this as T);
 		}
 
 		/// <summary>
