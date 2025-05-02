@@ -49,7 +49,6 @@ namespace BasicUtilities
 		protected void InvokeTick(T timer) => OnTick?.Invoke(timer);
 		protected void InvokeStop(T timer) => OnStop?.Invoke(timer);
 		protected void InvokePause(T timer) => OnPause?.Invoke(timer);
-		protected void InvokeResume(T timer) => OnResume?.Invoke(timer);
 		#endregion
 
 		#region Timer Methods
