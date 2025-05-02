@@ -50,4 +50,4 @@ This timer has a built in laps list that when started will start tracking the cu
 
 #### One-Shot Timer
 
-This static class holds two methods that are built to be *lightweight** helper methods. The methods take in a duration and will call a specified `Action` after said time. 
+This static class holds two methods that are built to be *lightweight* helper methods. The methods take in a duration and will call a specified `Action` after said time. 
