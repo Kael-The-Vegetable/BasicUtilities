@@ -1,5 +1,5 @@
 {
-    "name": "Runtime/Kael-The-Vegetable.BasicUtilities",
+    "name": "Kael-The-Vegetable.BasicUtilities",
     "rootNamespace": "BasicUtilities",
     "references": [],
     "includePlatforms": [],
