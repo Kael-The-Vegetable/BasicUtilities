@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Fixed Bug that caused namespace to not be recognized by Visual Studio.
+- Added ability for OneShotTimer to invoke with the time delayed by.
 
 ## [0.1.0] - 2025-05-01
 
