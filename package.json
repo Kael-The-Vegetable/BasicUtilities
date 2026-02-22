@@ -1,6 +1,6 @@
 {
   "name": "com.kael-the-vegetable.basic_utilities",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "displayName": "Basic Utilities",
   "description": "This package holds basic utilities that are found it almost all Unity games such as Singletons, Timers, and Object Pools.",
   "unity": "6000.0",
@@ -13,14 +13,18 @@
   "samples": [
     {
       "displayName": "Timer Examples",
-      "description": "Contains an example script and scene that uses the timers in this package.",
+      "description": "Shows how to use the timer utilities.",
       "path": "Samples~/Timers"
     },
     {
       "displayName": "Object Pool Examples",
       "description": "Shows how to use the object pooling utilities.",
       "path": "Samples~/ObjectPools"
+    },
+    {
+      "displayName": "Singleton Examples",
+      "description": "Shows how to use the singleton utilities.",
+      "path": "Samples~/Singletons"
     }
-
   ]
 }
