@@ -21,11 +21,17 @@ namespace BasicUtilities
 		/// </remarks>
 		public static async void Delay(float delay, Action action, CancellationToken t)
 		{
-			while (delay > 0)
+			try
 			{
-				await Awaitable.NextFrameAsync(t);
-				if (t.IsCancellationRequested) return;
-				delay -= Time.deltaTime;
+				while (delay > 0)
+				{
+					await Awaitable.NextFrameAsync(t);
+					delay -= Time.deltaTime;
+				}
+			}
+			catch (OperationCanceledException)
+			{
+				return;
 			}
 			action.Invoke();
 		}
@@ -42,12 +48,18 @@ namespace BasicUtilities
 		/// </remarks>
 		public static async void Delay(float delay, Action<float> action, CancellationToken t)
 		{
-			float time = delay;
-			while (time > 0)
+			try
 			{
-				await Awaitable.NextFrameAsync(t);
-				if (t.IsCancellationRequested) return;
-				time -= Time.deltaTime;
+				float time = delay;
+				while (time > 0)
+				{
+					await Awaitable.NextFrameAsync(t);
+					time -= Time.deltaTime;
+				}
+			}
+			catch (OperationCanceledException)
+			{
+				return;
 			}
 			action.Invoke(delay);
 		}
@@ -64,8 +76,14 @@ namespace BasicUtilities
 		/// </remarks>
 		public static async void DelayRealtime(float delay, Action action, CancellationToken t)
 		{
-			await Awaitable.WaitForSecondsAsync(delay, t);
-			if (t.IsCancellationRequested) return;
+			try 
+			{
+				await Awaitable.WaitForSecondsAsync(delay, t);
+			}
+			catch (OperationCanceledException)
+			{
+				return;
+			}
 			action.Invoke();
 		}
 	}
