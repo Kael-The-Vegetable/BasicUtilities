@@ -20,7 +20,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Fixed typo in AnnexSingleton summary.
-- Fixed this changelog to use true "Keep a Changelog" system
+- Fixed this changelog to use true "Keep a Changelog" system.
+- Fixed License to now work on GitHub.
 
 ## [0.1.1] - 2025-05-06
 
