@@ -12,16 +12,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added a new class to interface with Unity's ObjectPool system.
 - Added a scene for the timer sample to show it in action.
 - Added documentation for the MonoObjectPool class.
+- Added a new sample for object pooling.
 
 ### Changed
 
 - Updated timer sample to use new input system.
+- Changed package.json to include new sample.
 
 ### Fixed
 
 - Fixed typo in AnnexSingleton summary.
 - Fixed this changelog to use true "Keep a Changelog" system.
 - Fixed License to now work on GitHub.
+- Fixed OneShotTimers so they do not give cancellation exceptions.
 
 ## [0.1.1] - 2025-05-06
 

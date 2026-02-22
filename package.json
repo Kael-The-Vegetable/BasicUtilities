@@ -15,6 +15,12 @@
       "displayName": "Timer Examples",
       "description": "Contains an example script and scene that uses the timers in this package.",
       "path": "Samples~/Timers"
+    },
+    {
+      "displayName": "Object Pool Examples",
+      "description": "Shows how to use the object pooling utilities.",
+      "path": "Samples~/ObjectPools"
     }
+
   ]
 }
