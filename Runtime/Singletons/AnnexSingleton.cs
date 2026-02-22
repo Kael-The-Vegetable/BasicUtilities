@@ -7,7 +7,7 @@ namespace BasicUtilities
 	/// <br />
 	/// Use this if you need global data that exists between scenes and when a scene that holds an existing <see cref="AnnexSingleton{T}"/> comes along, that singleton takes over the role of singleton. Use <seealso cref="Singleton{T}"/> if you do not need the script to be available between scenes or <seealso cref="PersistentSingleton{T}"/> if you do not need new objects to take over the old ones.
 	/// </summary>
-	/// <typeparam name="T">T refers to the class that you desire to inherent <see cref="PersistentSingleton{T}"/>.</typeparam>
+	/// <typeparam name="T">T refers to the class that you desire to inherent <see cref="AnnexSingleton{T}"/>.</typeparam>
 	public abstract class AnnexSingleton<T> : MonoBehaviour where T : Component
 	{
 		#region Properties
