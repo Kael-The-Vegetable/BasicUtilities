@@ -48,7 +48,7 @@ namespace BasicUtilities
 				transform.SetParent(null);
 			}
 
-			if (instance != this)
+			if (instance != this && instance != null)
 			{
 				Destroy(instance.gameObject);
 			}
