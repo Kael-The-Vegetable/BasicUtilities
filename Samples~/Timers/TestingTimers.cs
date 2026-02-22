@@ -1,5 +1,6 @@
 using BasicUtilities;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class TestingTimers : MonoBehaviour
 {
@@ -33,15 +34,15 @@ public class TestingTimers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             stopwatch.Pause(!stopwatch.IsPaused);
         }
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Keyboard.current.leftShiftKey.wasPressedThisFrame)
         {
             stopwatch.Lap();
         }
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Keyboard.current.cKey.wasPressedThisFrame)
         {
             OneShotTimer.Delay(2, () => Debug.Log("C Pressed"), destroyCancellationToken);
         }
