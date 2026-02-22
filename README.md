@@ -11,6 +11,8 @@ In this package there is currently 2 types of features added to help developers.
 	- Singletons are scripts that when added are the only version of that script currently in scene.
 - **Timers**
 	- Timers are run through async methods and Unity's built in `Awaitable` class. Timers have functionality to allow users to have them run in *Realtime* or in *Gametime*.
+- **Object Pools**
+	- Pools are container classes that use Unity's built in `ObjectPool` class. It handles the boilerplate and provides some useful functionality.
 
 ## Other Useful Information
 
