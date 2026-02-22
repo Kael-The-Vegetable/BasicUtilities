@@ -5,12 +5,32 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.0] - 2026-02-21
+
+### Added
+
+- Added a new class to interface with Unity's ObjectPool system.
+- Added a scene for the timer sample to show it in action.
+- Added documentation for the MonoObjectPool class.
+
+### Changed
+
+- Updated timer sample to use new input system.
+
+### Fixed
+
+- Fixed typo in AnnexSingleton summary.
+- Fixed this changelog to use true "Keep a Changelog" system
+
 ## [0.1.1] - 2025-05-06
 
 ### Added
 
-- Fixed Bug that caused namespace to not be recognized by Visual Studio.
 - Added ability for OneShotTimer to invoke with the time delayed by.
+
+### Fixed
+
+- Fixed Bug that caused namespace to not be recognized by Visual Studio.
 
 ## [0.1.0] - 2025-05-01
 
