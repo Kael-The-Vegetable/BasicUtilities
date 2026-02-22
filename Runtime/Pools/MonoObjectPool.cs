@@ -32,6 +32,14 @@ namespace BasicUtilities
 		/// </summary>
 		public ObjectPool<T> Pool { get; }
 
+		/// <summary>
+		/// Construct a new pool to pull objects from.
+		/// </summary>
+		/// <param name="prefab">Prefab to be duplicated.</param>
+		/// <param name="parent">Transform to parent objects in heirarchy.</param>
+		/// <param name="size">Initial allocated size.</param>
+		/// <param name="maxSize">Maximum allocated size.</param>
+		/// <param name="allowMoreThanMax">Uncapped size.</param>
 		public MonoObjectPool(T prefab, Transform parent, int size = 50, int maxSize = 1000, bool allowMoreThanMax = true)
 		{
 			_prefab = prefab;
