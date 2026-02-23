@@ -5,7 +5,7 @@
 
 ## Included Features
 
-In this package there is currently 2 types of features added to help developers. Both are under the namespace `BasicUtilities`.
+In this package there is currently 3 types of features added to help developers. All are under the namespace `BasicUtilities`.
 
 - **Singletons**
 	- Singletons are scripts that when added are the only version of that script currently in scene.
