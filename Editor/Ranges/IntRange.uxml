@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Assets/BasicUtilities/Editor/Ranges/Range.uss?fileID=7433441132597879392&amp;guid=3dbd014aec12ee0468b416865b37dba8&amp;type=3#Range"/>
+    <ui:VisualElement name="Base" style="flex-grow: initial; align-items: stretch; justify-content: space-between; align-self: stretch; flex-direction: row;">
+        <ui:Label text="Namename" name="Name" view-data-key="_name" enabled="true" style="-unity-text-align: middle-left; width: auto; padding-left: 3px; max-width: none;"/>
+        <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
+            <ui:IntegerField label="Min" value="42" name="Min" view-data-key="_min" style="width: 50%;"/>
+            <ui:IntegerField label="Max" value="42" view-data-key="_max" name="Max" style="width: 50%;"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
