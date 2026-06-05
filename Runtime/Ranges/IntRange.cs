@@ -10,7 +10,6 @@ namespace BasicUtilities
 	{
         [SerializeField] private int _min;
         [SerializeField] private int _max;
-		private int _dif;
 
 		/// <summary>
 		/// Minimum value of the range. If set higher than <see cref="Max"/>, the two values will swap.
@@ -24,7 +23,6 @@ namespace BasicUtilities
 					(_max, _min) = (value, _max);
 				else
 					_min = value;
-				_dif = _max - _min;
 			}
 		}
 
@@ -40,14 +38,13 @@ namespace BasicUtilities
 					(_max, _min) = (_min, value);
 				else
 					_max = value;
-				_dif = _max - _min;
 			}
 		}
 
 		/// <summary>
 		/// The difference between the maximum and minimum values of the range.
 		/// </summary>
-		public readonly int Difference => _dif;
+		public readonly int Difference => _max - _min;
 
 		/// <summary>
 		/// Create a new IntRange with given min and max values.
@@ -65,7 +62,6 @@ namespace BasicUtilities
 				_min = min;
 				_max = max;
 			}
-			_dif = _max - _min;
 		}
 
 		/// <summary>
@@ -78,7 +74,7 @@ namespace BasicUtilities
 		/// Gets a random value between the minimum and maximum values of the range.
 		/// </summary>
 		/// <returns>Returns a int inclusively in the range [Min, Max].</returns>
-		public int Get() => Random.Range(Min, Max);
+		public int Get() => Random.Range(Min, Max + 1);
 
 		/// <summary>
 		/// Checks if a given value is within the range inclusively.

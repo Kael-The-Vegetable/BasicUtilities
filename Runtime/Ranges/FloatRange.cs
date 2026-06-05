@@ -10,7 +10,6 @@ namespace BasicUtilities
 	{
         [SerializeField] private float _min;
         [SerializeField] private float _max;
-		private float _dif;
 
 		/// <summary>
 		/// Minimum value of the range. If set higher than <see cref="Max"/>, the two values will swap.
@@ -24,7 +23,6 @@ namespace BasicUtilities
 					(_max, _min) = (value, _max);
 				else
 					_min = value;
-				_dif = _max - _min;
 			}
 		}
 
@@ -40,14 +38,13 @@ namespace BasicUtilities
 					(_max, _min) = (_min, value);
 				else
 					_max = value;
-				_dif = _max - _min;
 			}
 		}
 
 		/// <summary>
 		/// The difference between the maximum and minimum values of the range.
 		/// </summary>
-		public readonly float Difference => _dif;
+		public readonly float Difference => _max - _min;
 
 		/// <summary>
 		/// Create a new FloatRange with given min and max values.
@@ -65,7 +62,6 @@ namespace BasicUtilities
 				_min = min;
 				_max = max;
 			}
-			_dif = _max - _min;
 		}
 
 		/// <summary>
