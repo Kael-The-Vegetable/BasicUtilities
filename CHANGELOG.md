@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Ranges of numbers for ease of getting a value between 2 values.
+- A Range Sample pack that shows how to use the ranges.
 
 ## [0.2.1] - 2026-02-22
 

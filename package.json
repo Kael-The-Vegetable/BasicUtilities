@@ -1,30 +1,35 @@
 {
-  "name": "com.kael-the-vegetable.basic_utilities",
-  "version": "0.2.1",
-  "displayName": "Basic Utilities",
-  "description": "This package holds basic utilities that are found it almost all Unity games such as Singletons, Timers, and Object Pools.",
-  "unity": "6000.0",
-  "unityRelease": "46f1",
-  "author": {
+    "name": "com.kael-the-vegetable.basic_utilities",
+    "version": "0.2.1",
+    "displayName": "Basic Utilities",
+    "description": "This package holds basic utilities that are found it almost all Unity games such as Singletons, Timers, and Object Pools.",
+    "unity": "6000.0",
+    "unityRelease": "46f1",
+    "author": {
     "name": "Kael Kostiuk",
     "email": "kael.kostiuk@gmail.com",
     "url": "https://kael-the-vegetable.github.io/"
-  },
-  "samples": [
-    {
-      "displayName": "Timer Examples",
-      "description": "Shows how to use the timer utilities.",
-      "path": "Samples~/Timers"
     },
-    {
-      "displayName": "Object Pool Examples",
-      "description": "Shows how to use the object pooling utilities.",
-      "path": "Samples~/ObjectPools"
-    },
-    {
-      "displayName": "Singleton Examples",
-      "description": "Shows how to use the singleton utilities.",
-      "path": "Samples~/Singletons"
-    }
-  ]
+    "samples": [
+        {
+            "displayName": "Timer Examples",
+            "description": "Shows how to use the timer utilities.",
+            "path": "Samples~/Timers"
+        },
+        {
+            "displayName": "Object Pool Examples",
+            "description": "Shows how to use the object pooling utilities.",
+            "path": "Samples~/ObjectPools"
+        },
+        {
+            "displayName": "Singleton Examples",
+            "description": "Shows how to use the singleton utilities.",
+            "path": "Samples~/Singletons"
+        },
+        {
+            "displayName": "Range Example",
+            "description": "Shows how to use the range utilities.",
+            "path": "Samples~/Ranges"
+        }
+    ]
 }
