@@ -13,7 +13,8 @@ In this package there is currently 3 types of features added to help developers.
 	- Timers are run through async methods and Unity's built in `Awaitable` class. Timers have functionality to allow users to have them run in *Realtime* or in *Gametime*.
 - **Object Pools**
 	- Pools are container classes that use Unity's built in `ObjectPool` class. It handles the boilerplate and provides some useful functionality.
-
+- **Ranges**
+	- Ranges are container structs for 2 values (a minimum and a maximum). There are 2 versions `FloatRange` and `IntRange`.
 ## Other Useful Information
 
 You may find the documentation [here](Documentation~/DOCUMENTATION.md).
