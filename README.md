@@ -1,11 +1,11 @@
 # Basic Utilities
 
 > [!NOTE]
-> This package is meant for those who desire a a quick easy way to include basic tools that are used in most Unity projects.
+> This package is meant for those who desire a quick easy way to include basic tools that are used in most Unity projects.
 
 ## Included Features
 
-In this package there is currently 3 types of features added to help developers. All are under the namespace `BasicUtilities`.
+In this package there is currently 4 types of features added to help developers. All are under the namespace `BasicUtilities`.
 
 - **Singletons**
 	- Singletons are scripts that when added are the only version of that script currently in scene.
