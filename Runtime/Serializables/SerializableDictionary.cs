@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting.YamlDotNet.Core.Tokens;
 using UnityEngine;
 
 namespace BasicUtilities
@@ -23,14 +24,21 @@ namespace BasicUtilities
         {
             this.Clear();
 
-            SerializedKeys ??= new List<KeyType>();
-            SerializedValues ??= new List<ValueType>();
-            int count = Mathf.Min(SerializedKeys.Count, SerializedValues.Count);
+            if (SerializedKeys == null || SerializedValues == null)
+            {
+                Debug.LogWarning("SerializedKeys or SerializedValues is null. Rebuilding...");
+                SerializedKeys = new List<KeyType>();
+                SerializedValues = new List<ValueType>();
+            }
+            
             if (SerializedKeys.Count != SerializedValues.Count)
             { 
-                Debug.LogWarning($"SerializedKeys and SerializedValues have different counts. Keys: {SerializedKeys.Count}, Values: {SerializedValues.Count}");
+                Debug.LogWarning($"SerializedKeys and SerializedValues have different counts. Keys: {SerializedKeys.Count}, Values: {SerializedValues.Count}. Rebuilding...");
+                SerializedKeys = new(Keys);
+                SerializedValues = new(Values);
             }
 
+            int count = Mathf.Min(SerializedKeys.Count, SerializedValues.Count);
             for (int i = 0; i < count; i++)
             {
                 this[SerializedKeys[i]] = SerializedValues[i];
@@ -42,33 +50,14 @@ namespace BasicUtilities
 #if UNITY_EDITOR
         public void Editor_AddEntry(KeyType key, ValueType value)
         {
-            if (!this.ContainsKey(key))
-            {
-                this[key] = value;
-                SerializedKeys.Add(key);
-                SerializedValues.Add(value);
-            }
-            else
-            {
-                Debug.LogWarning($"Key {key} already exists in the dictionary.");
-            }
+            SerializedKeys.Add(key);
+            SerializedValues.Add(value);
         }
         public void Editor_RemoveEntry(KeyType key)
         {
-            if (this.ContainsKey(key))
-            {
-                int index = SerializedKeys.IndexOf(key);
-                if (index >= 0)
-                {
-                    SerializedKeys.RemoveAt(index);
-                    SerializedValues.RemoveAt(index);
-                }
-                this.Remove(key);
-            }
-            else
-            {
-                Debug.LogWarning($"Key {key} does not exist in the dictionary.");
-            }
+            int id = SerializedKeys.IndexOf(key);
+            SerializedKeys.RemoveAt(id);
+            SerializedValues.RemoveAt(id);
         }
 #endif // UNITY_EDITOR
         #endregion
